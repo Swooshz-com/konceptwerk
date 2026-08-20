@@ -1,7 +1,7 @@
 .home-hero {
   position: relative;
   display: flex;
-  min-height: max(46rem, 100svh);
+  min-height: 100svh;
   align-items: flex-end;
   overflow: hidden;
   background: var(--ink);
@@ -22,13 +22,13 @@
   z-index: 1;
   width: min(100%, 100rem);
   margin-inline: auto;
-  padding: calc(var(--header-height) + 6rem) var(--page-gutter) clamp(4.5rem, 9vh, 7.5rem);
+  padding: calc(var(--header-height) + clamp(2.5rem, 5vh, 5rem)) var(--page-gutter) clamp(3rem, min(8vh, 6.5rem), 6.5rem);
 }
 
 .home-hero h1 {
   max-width: 8.5ch;
   margin-bottom: 1.75rem;
-  font-size: clamp(4.3rem, 8.5vw, 9rem);
+  font-size: clamp(4.25rem, min(8.5vw, 12.5vh), 8.5rem);
   line-height: 0.82;
   text-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.2);
 }
