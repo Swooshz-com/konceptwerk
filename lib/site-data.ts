@@ -10,6 +10,7 @@ export const site = {
 } as const;
 
 export const navigation = [
+  { label: "Home", href: "/" },
   { label: "About us", href: "/studio" },
   { label: "Our Services", href: "/services" },
   { label: "Career", href: "/studio#career" },

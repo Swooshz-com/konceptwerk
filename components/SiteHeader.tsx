@@ -149,10 +149,6 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
         aria-hidden={!menuOpen}
       >
         <nav className="mobile-menu__nav" aria-label="Mobile navigation">
-          <Link href="/" className="mobile-menu__link" tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>
-            <span>00</span>
-            Home
-          </Link>
           {navigation.map((item, index) => (
             <Link
               key={item.href}
@@ -161,7 +157,7 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
               tabIndex={menuOpen ? 0 : -1}
               onClick={() => setMenuOpen(false)}
             >
-              <span>{String(index + 1).padStart(2, "0")}</span>
+              <span>{String(index).padStart(2, "0")}</span>
               {item.label}
             </Link>
           ))}

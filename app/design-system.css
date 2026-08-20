@@ -601,11 +601,19 @@ html.reveal-ready [data-reveal] {
 }
 
 html.reveal-ready [data-reveal="image"] {
+  transform: translateY(1rem);
+}
+
+html.reveal-ready [data-reveal="image"] img {
   transform: scale(1.018);
 }
 
 html.reveal-ready [data-reveal].is-visible {
   opacity: 1;
+  transform: none;
+}
+
+html.reveal-ready [data-reveal="image"].is-visible img {
   transform: none;
 }
 
@@ -626,6 +634,10 @@ html.reveal-ready [data-reveal].is-visible {
   html.reveal-ready [data-reveal],
   html.reveal-ready [data-reveal="image"] {
     opacity: 1;
+    transform: none;
+  }
+
+  html.reveal-ready [data-reveal="image"] img {
     transform: none;
   }
 }
