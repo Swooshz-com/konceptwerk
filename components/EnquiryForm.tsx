@@ -64,7 +64,6 @@ export function EnquiryForm() {
             <option value="" disabled>Select one</option>
             <option>Residential</option>
             <option>Commercial</option>
-            <option>Exhibition</option>
             <option>Other</option>
           </select>
         </label>

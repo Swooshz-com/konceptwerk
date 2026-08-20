@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     absolute: "Koncept Werk | Interior Design & Build",
   },
   description:
-    "Koncept Werk brings intelligent interior design, construction and project management together for residential, commercial and exhibition spaces.",
+    "Koncept Werk brings intelligent interior design, construction and project management together for residential and commercial spaces.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -95,7 +95,7 @@ export default function HomePage() {
         <div className="home-intro__copy" data-reveal>
           <p>
             Koncept Werk combines intelligent interior design with contracting precision to deliver residential,
-            commercial and exhibition spaces from concept through execution.
+            commercial spaces from concept through execution.
           </p>
           <TextLink href="/studio">About Koncept Werk</TextLink>
         </div>

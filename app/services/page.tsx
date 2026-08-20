@@ -9,7 +9,7 @@ import { serviceGroups } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Residential interior design, commercial design and build, exhibition environments, custom carpentry and end-to-end project management.",
+    "Residential interior design, commercial design and build, custom carpentry and end-to-end project management.",
   alternates: { canonical: "/services" },
 };
 
@@ -21,7 +21,7 @@ export default function ServicesPage() {
         <div>
           <p>
             Koncept Werk connects interior design, visualisation, construction and project management for homes,
-            commercial environments and exhibition spaces.
+            commercial environments and workplace interiors.
           </p>
         </div>
       </header>

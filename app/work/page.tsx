@@ -6,7 +6,7 @@ import { ProjectGrid } from "@/components/ProjectGrid";
 export const metadata: Metadata = {
   title: "Selected Work",
   description:
-    "Explore selected Koncept Werk residential, commercial, food and beverage, and exhibition interiors.",
+    "Explore selected Koncept Werk residential, commercial, food and beverage, and workplace interiors.",
   alternates: { canonical: "/work" },
 };
 
@@ -17,7 +17,7 @@ export default function WorkPage() {
         <h1>Selected work</h1>
         <div className="page-intro__copy">
           <p>
-            A selection of residential, commercial and exhibition environments, shaped from concept through
+            A selection of residential and commercial interiors, shaped from concept through
             execution.
           </p>
         </div>

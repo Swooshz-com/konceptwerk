@@ -5,7 +5,7 @@ import { site } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Start a residential, commercial or exhibition project with Koncept Werk in Singapore.",
+  description: "Start a residential or commercial interior project with Koncept Werk in Singapore.",
   alternates: { canonical: "/contact" },
 };
 

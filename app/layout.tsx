@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Koncept Werk",
   },
   description:
-    "Koncept Werk brings intelligent interior design, construction and project management together for residential, commercial and exhibition spaces.",
+    "Koncept Werk brings intelligent interior design, construction and project management together for residential and commercial spaces.",
   icons: {
     icon: "/images/brand/koncept-mark.webp",
     apple: "/images/brand/koncept-mark.webp",

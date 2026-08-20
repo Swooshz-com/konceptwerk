@@ -38,11 +38,10 @@ npm run start
 - `/` — homepage
 - `/work` and `/work/[slug]` — filterable project index and reusable project-detail system
 - `/studio` — studio story, verified team and six-stage process
-- `/services` — residential, commercial and exhibition services
+- `/services` — residential and commercial services
 - `/journal` and `/journal/[slug]` — article index and reusable article layout
 - `/careers` — general expression-of-interest experience; no vacancies are invented
 - `/contact` — project enquiry experience
-- `/fha` — exhibition-service landing page
 - `/privacy` and `/terms` — legal pages
 
 Legacy routes from the existing site are redirected in `next.config.ts`.

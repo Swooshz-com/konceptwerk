@@ -198,9 +198,7 @@ h2 {
 .article-card__image,
 .team-member__image,
 .service-chapter__image,
-.career-hero__image,
-.fha-hero__image,
-.booth-card__image {
+.career-hero__image {
   position: relative;
   overflow: hidden;
   background: var(--stone);
@@ -217,17 +215,14 @@ h2 {
 .article-card__image img,
 .team-member__image img,
 .service-chapter__image img,
-.career-hero__image img,
-.fha-hero__image img,
-.booth-card__image img {
+.career-hero__image img {
   object-fit: cover;
   transition: transform 900ms var(--ease-out);
 }
 
 .home-project:hover img,
 .project-card:hover img,
-.article-card:hover img,
-.booth-card:hover img {
+.article-card:hover img {
   transform: scale(1.035);
 }
 

@@ -4,7 +4,11 @@
   }
 
   .site-footer__top {
-    grid-template-columns: 1.4fr repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer__brand {
+    grid-column: 1 / -1;
   }
 
   .site-footer__column:last-child {
@@ -120,8 +124,7 @@
   .service-chapter,
   .service-chapter:nth-child(even),
   .journal-featured,
-  .contact-hero,
-  .fha-hero {
+  .contact-hero {
     grid-template-columns: 1fr;
   }
 
@@ -130,8 +133,7 @@
   }
 
   .service-chapter__image,
-  .journal-featured__image,
-  .fha-hero__image {
+  .journal-featured__image {
     min-height: min(34rem, 68svh);
     order: -1;
   }
@@ -206,7 +208,6 @@
   .home-work-grid,
   .project-grid,
   .article-index,
-  .booth-grid,
   .studio-strengths__list {
     grid-template-columns: 1fr;
   }
@@ -288,7 +289,6 @@
   .project-intro h1,
   .services-intro h1,
   .career-hero h1,
-  .fha-hero h1,
   .article-page__header h1 {
     font-size: clamp(3.35rem, 16vw, 5.5rem);
   }
@@ -354,7 +354,6 @@
 
   .service-chapter__image,
   .journal-featured__image,
-  .fha-hero__image,
   .career-hero__image {
     min-height: min(29rem, 68svh);
   }
@@ -388,18 +387,6 @@
 
   .form-row--two {
     grid-template-columns: 1fr;
-  }
-
-  .site-footer__top {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .site-footer__brand {
-    grid-column: 1 / -1;
-  }
-
-  .site-footer__column:last-child {
-    grid-column: 1 / -1;
   }
 
   .site-footer__base {

@@ -9,7 +9,6 @@ This document records the factual basis used for the redesign. It is not a claim
 - Services: <https://konceptwerk.com/our-services/>
 - Contact: <https://konceptwerk.com/contact/>
 - Journal index: <https://konceptwerk.com/blog/>
-- Exhibition/FHA page: <https://konceptwerk.com/fha/>
 - Privacy: <https://konceptwerk.com/privacy-policy/>
 - Terms: <https://konceptwerk.com/terms-of-service/>
 - Public portfolio archive linked from the existing site: <https://www.dropbox.com/scl/fo/8bvjjoze9b5peh5nx5lea/AAB2nEuVJXWX91HRJnJu-B0?rlkey=fno4lt6un87a8sse6ldv6dp8r&st=vlh0oxra&dl=0>
@@ -25,9 +24,8 @@ Public pages and image assets were inspected read-only. Production systems were 
 - Hours: Monday to Friday, 09:00 am to 09:00 pm; weekends closed.
 - Team: Arifin Ahmad, Principal Designer; Güney Topsakal, Interior Architect.
 - Brand language includes “Smart Design. Seamless Execution. Tailored for Your Space.” and “Design smart. Live better.”
-- Residential, commercial and exhibition services are based on the corresponding published service pages.
+- Residential and commercial services are based on the corresponding published service pages.
 - Process stage names are retained exactly: Initial Contact; First Consultation; Quotation; Design & Planning; Work & Scheduling; Renovation Period.
-- Exhibition labels Ebara, Ideku, Luxury, Hwee Jan and Kopi 434 are retained only where their published booth imagery supports them.
 
 ## Portfolio integrity
 

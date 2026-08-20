@@ -29,7 +29,7 @@ No root `MEMORY.md` exists; none was needed.
 
 ## Implemented surface reviewed
 
-- Homepage, project index/filtering, five reusable project-detail pages, studio, services, journal index, three reusable article pages, contact, careers, FHA/exhibitions, privacy, terms, 404, sitemap and robots output.
+- Homepage, project index/filtering, four reusable project-detail pages, studio, services, journal index, three reusable article pages, contact, careers, privacy, terms, 404, sitemap and robots output.
 - Responsive site header, focus-contained and keyboard-dismissable mobile navigation, footer, image reveal system, project filters, enquiry and career form states.
 - Next.js metadata, canonicals, Open Graph/Twitter baseline, verified ProfessionalService structured data and permanent legacy redirects.
 - Local source imagery, local fonts and framework-native responsive image optimisation.

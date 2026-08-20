@@ -17,7 +17,7 @@ export const navigation = [
   { label: "Contact Us", href: "/contact" },
 ] as const;
 
-export type ProjectCategory = "Residential" | "Commercial" | "Exhibition";
+export type ProjectCategory = "Residential" | "Commercial";
 export type ImageAspect = "wide" | "landscape" | "portrait" | "square";
 
 export type ProjectImage = {
@@ -211,44 +211,6 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    slug: "exhibition-environments",
-    title: "Exhibition environments",
-    category: "Exhibition",
-    scope: "Design, visualisation & build",
-    summary: "Custom booths supported by visualisation, fabrication, branding and on-site delivery.",
-    narrative: [
-      "Koncept Werk extends its design-and-build approach to exhibition environments, coordinating the booth concept, 3D visualisation, fabrication, lighting, graphics and project management.",
-      "Ebara, Ideku, Luxury, Hwee Jan and Kopi 434 are among the booth environments in this selection.",
-    ],
-    cover: {
-      src: "/images/projects/exhibition/ebara.webp",
-      alt: "Ebara exhibition booth with product displays and overhead branding",
-      aspect: "landscape",
-    },
-    gallery: [
-      {
-        src: "/images/projects/exhibition/ideku.webp",
-        alt: "Ideku exhibition booth with open display counters",
-        aspect: "landscape",
-      },
-      {
-        src: "/images/projects/exhibition/luxury.webp",
-        alt: "Luxury exhibition booth with illuminated product shelving",
-        aspect: "landscape",
-      },
-      {
-        src: "/images/projects/exhibition/hwee-jan.webp",
-        alt: "Hwee Jan exhibition booth with branded display walls",
-        aspect: "landscape",
-      },
-      {
-        src: "/images/projects/exhibition/kopi-434.webp",
-        alt: "Kopi 434 exhibition booth with coffee product displays",
-        aspect: "wide",
-      },
-    ],
-  },
 ];
 
 export const processSteps = [
@@ -314,24 +276,6 @@ export const serviceGroups = [
       "Turnkey delivery",
     ],
     projectSlug: "commercial-interiors",
-  },
-  {
-    id: "exhibitions",
-    number: "03",
-    title: "Exhibitions",
-    heading: "Brand environments carried from concept to the show floor.",
-    description:
-      "Koncept Werk provides custom booth design, 3D visualisation, fabrication, lighting, graphics and project management for exhibition projects.",
-    image: "/images/projects/exhibition/ebara.webp",
-    imageAlt: "Branded exhibition booth with illuminated overhead signage",
-    services: [
-      "Custom booth concepts",
-      "3D design & visualisation",
-      "Fabrication & on-site build",
-      "Lighting, AV, branding & graphics",
-      "Project management across Asia",
-    ],
-    projectSlug: "exhibition-environments",
   },
 ] as const;
 

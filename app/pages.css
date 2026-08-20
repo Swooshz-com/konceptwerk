@@ -406,6 +406,7 @@
 .inquiry-cta {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
+  overflow: hidden;
   background: var(--brown-deep);
   color: var(--paper-light);
 }
@@ -451,8 +452,7 @@
 
 .page-intro h1,
 .services-intro h1,
-.career-hero h1,
-.fha-hero h1 {
+.career-hero h1 {
   max-width: 11ch;
   margin: 0;
   color: var(--brown);
@@ -1207,58 +1207,6 @@
   display: grid;
   gap: 0.4rem;
   padding-left: 1.2rem;
-}
-
-.fha-hero {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  min-height: min(47rem, calc(100svh - var(--header-height)));
-  background: var(--brown-deep);
-  color: var(--paper-light);
-}
-
-.fha-hero__copy {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  padding: clamp(3rem, 7vw, 8rem) var(--page-gutter);
-}
-
-.fha-hero h1 {
-  margin-bottom: 1.5rem;
-  color: var(--paper-light);
-}
-
-.fha-hero p {
-  max-width: 30rem;
-  color: var(--stone);
-}
-
-.fha-hero .text-link {
-  margin-top: 1rem;
-  border-color: var(--line-light);
-}
-
-.fha-hero__image {
-  min-height: 31rem;
-}
-
-.booth-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(2rem, 4vw, 4rem) clamp(1rem, 2.5vw, 2.5rem);
-}
-
-.booth-card__image {
-  aspect-ratio: 4 / 3;
-}
-
-.booth-card h3 {
-  margin: 0.9rem 0 0;
-  color: var(--brown);
-  font-size: clamp(1.8rem, 2.7vw, 2.8rem);
-  line-height: 1;
 }
 
 .not-found {
