@@ -1,0 +1,10 @@
+.site-footer__wordmark {
+  font-size: clamp(5.2rem, 13.2vw, 13.2rem);
+}
+
+@media (max-width: 767px) {
+  .site-footer__wordmark {
+    font-size: 13.5vw;
+    letter-spacing: -0.025em;
+  }
+}
