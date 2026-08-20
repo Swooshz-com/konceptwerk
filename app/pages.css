@@ -1227,3 +1227,44 @@
   margin-bottom: 1.5rem;
   color: var(--muted);
 }
+
+/* Keep the major page regions in a calm, viewport-led rhythm at every viewport. */
+#main-content > :is(header, section) {
+  min-height: calc(100svh - var(--header-height));
+}
+
+#main-content > :is(header, section):not(.home-hero):not(.inquiry-cta) {
+  align-items: center;
+}
+
+#main-content.page-main--flush > .home-hero {
+  min-height: 100svh;
+  align-content: end;
+  align-items: end;
+}
+
+#main-content > .home-intro {
+  align-content: center;
+}
+
+#main-content > :is(.home-services, .home-principles) {
+  display: flex;
+  align-items: center;
+}
+
+#main-content > .home-services > .page-shell,
+#main-content > .home-principles > .home-principles__layout {
+  flex: 0 1 auto;
+  width: min(100%, var(--content-width));
+}
+
+#main-content > :is(.home-work, .home-process, .journal-preview) {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+#main-content > .home-work {
+  padding-block: var(--section-space);
+}

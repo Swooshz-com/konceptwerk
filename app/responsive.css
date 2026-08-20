@@ -418,3 +418,12 @@
     grid-column: 1;
   }
 }
+
+/* Keep section sizing viewport-led on mobile; wheel assist remains desktop-only. */
+#main-content > :is(header, section) {
+  min-height: calc(100svh - var(--header-height));
+}
+
+#main-content.page-main--flush > .home-hero {
+  min-height: 100svh;
+}
