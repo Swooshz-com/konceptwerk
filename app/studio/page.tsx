@@ -24,21 +24,22 @@ export default function StudioPage() {
   return (
     <main id="main-content" className="studio-page page-main">
       <header className="studio-hero">
-        <div className="studio-hero__copy">
-          <h1>A studio where design meets delivery.</h1>
-          <p className="prose-large">
-            Founded with a vision to bring intelligent, space-saving interior solutions to modern living and work
-            environments, Koncept Werk combines design expertise with contracting precision.
-          </p>
-        </div>
         <div className="studio-hero__image media-frame">
           <Image
             src="/images/projects/residential/kitchen-warm.webp"
             alt="Koncept Werk warm kitchen and living interior"
             fill
             priority
-            sizes="(max-width: 900px) 100vw, 58vw"
+            sizes="(max-width: 900px) 100vw, 62vw"
           />
+        </div>
+        <div className="studio-hero__copy">
+          <p className="eyebrow">About Koncept Werk</p>
+          <h1>A studio where design meets delivery.</h1>
+          <p className="prose-large">
+            Founded with a vision to bring intelligent, space-saving interior solutions to modern living and work
+            environments, Koncept Werk combines design expertise with contracting precision.
+          </p>
         </div>
       </header>
 

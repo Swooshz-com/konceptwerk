@@ -19,7 +19,6 @@ export function SiteFooter() {
         </div>
         <div className="site-footer__column">
           <p className="footer-label">Quick links</p>
-          <Link href="/">Home</Link>
           {navigation.map((item) => (
             <Link key={item.href} href={item.href}>
               {item.label}
@@ -29,8 +28,8 @@ export function SiteFooter() {
         </div>
         <div className="site-footer__column">
           <p className="footer-label">Talk to us</p>
-          <a href={`mailto:${site.email}`}>{site.email}</a>
-          <a href={`tel:${site.phone}`}>{site.phoneDisplay}</a>
+          <a href={"mailto:" + site.email}>{site.email}</a>
+          <a href={"tel:" + site.phone}>{site.phoneDisplay}</a>
           <p>{site.address}</p>
         </div>
         <div className="site-footer__column">

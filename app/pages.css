@@ -1301,3 +1301,191 @@
     line-height: 0.95;
   }
 }
+
+/* G3 convergence: keep the accepted warmth while bringing the floor plan closer to the reference. */
+.home-hero h1 {
+  max-width: 13ch;
+  font-size: clamp(3.25rem, 4.6vw, 4.8rem);
+  line-height: 0.95;
+}
+
+.home-hero h1 span {
+  display: block;
+}
+
+.home-intro h2 {
+  font-size: clamp(2.35rem, 4vw, 4.4rem);
+}
+
+.section-heading-row h2 {
+  font-size: clamp(2.25rem, 3.7vw, 4.2rem);
+}
+
+.home-services__intro h2,
+.home-process__heading h2 {
+  font-size: clamp(2.4rem, 4.2vw, 4.6rem);
+}
+
+.home-principles h2 {
+  font-size: clamp(2.55rem, 4.6vw, 5rem);
+}
+
+.home-work-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+}
+
+.home-work-row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 3.5rem) clamp(1rem, 2vw, 2rem);
+  align-items: start;
+}
+
+.home-work-row .home-project {
+  grid-column: span 5;
+  padding-top: 0;
+}
+
+.home-work-row .home-project:nth-child(2) {
+  grid-column: 7 / -1;
+  padding-top: clamp(2.5rem, 8vw, 7rem);
+}
+
+.home-work-row + .home-work-row .home-project:first-child {
+  grid-column: 1 / 7;
+  padding-top: clamp(1rem, 4vw, 3.5rem);
+}
+
+.home-work-row + .home-work-row .home-project:nth-child(2) {
+  grid-column: 8 / -1;
+  padding-top: clamp(2rem, 7vw, 6rem);
+}
+
+.journal-preview--quiet {
+  border-top: 1px solid var(--line);
+  background: var(--paper-light);
+  padding-block: clamp(3.75rem, 6vw, 6rem);
+}
+
+.journal-preview--quiet .section-heading-row {
+  margin-bottom: 1.5rem;
+}
+
+.journal-preview--quiet .journal-preview__grid {
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+.journal-preview--quiet .journal-preview__feature .article-card__image {
+  aspect-ratio: 16 / 8.8;
+}
+
+.journal-preview--quiet .article-card__copy {
+  padding-top: 0.85rem;
+}
+
+.journal-preview--quiet .article-card__copy h3 {
+  font-size: clamp(1.45rem, 2.25vw, 2.2rem);
+}
+
+.journal-preview--quiet .article-card__copy p {
+  max-width: 28rem;
+  font-size: 0.78rem;
+}
+
+.journal-preview--quiet .journal-preview__side {
+  gap: 1rem;
+}
+
+.studio-hero {
+  grid-template-columns: minmax(0, 1.14fr) minmax(19rem, 0.86fr);
+  min-height: min(38rem, calc(100svh - var(--header-height)));
+  background: var(--paper-light);
+}
+
+.studio-hero__image {
+  min-height: min(38rem, calc(100svh - var(--header-height)));
+}
+
+.studio-hero__copy {
+  padding: clamp(3rem, 6vw, 6rem) var(--page-gutter);
+  background: var(--paper-light);
+}
+
+.studio-hero__copy h1 {
+  max-width: 11ch;
+  font-size: clamp(3.45rem, 5vw, 5.5rem);
+}
+
+.services-intro {
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  min-height: min(34rem, calc(100svh - var(--header-height)));
+  align-items: stretch;
+  padding-block: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.services-intro__image {
+  min-height: clamp(20rem, 34vw, 30rem);
+}
+
+.services-intro__copy {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: clamp(0rem, 2vw, 2rem);
+}
+
+.services-intro__copy h1 {
+  max-width: 10ch;
+  font-size: clamp(3.35rem, 5.4vw, 5.8rem);
+}
+
+.services-intro__copy p:last-child {
+  max-width: 31rem;
+  margin: 0 0 0.4rem;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+}
+
+.contact-hero {
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  grid-template-rows: minmax(17rem, 0.82fr) minmax(19rem, 1fr);
+  grid-template-areas:
+    "image form"
+    "details form";
+  min-height: min(48rem, calc(100svh - var(--header-height)));
+}
+
+.contact-hero__image {
+  grid-area: image;
+  min-height: 17rem;
+}
+
+.contact-hero__details {
+  grid-area: details;
+}
+
+.contact-hero__form {
+  grid-area: form;
+}
+
+.contact-hero__details h1 {
+  font-size: clamp(3.35rem, 5.1vw, 5.5rem);
+}
+
+.site-header--overlay {
+  background: linear-gradient(180deg, rgba(26, 22, 18, 0.28), rgba(26, 22, 18, 0) 100%);
+}
+
+.site-header--menu-open .site-header__logo {
+  filter: brightness(0) invert(1);
+}
+
+.mobile-menu__link.is-active {
+  color: #e8c8b5;
+}
+
+.mobile-menu__link.is-active span {
+  color: var(--paper-light);
+}

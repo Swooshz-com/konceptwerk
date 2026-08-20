@@ -140,3 +140,45 @@ This does not imply comprehensive security coverage. A deployment-specific secur
 ## Conclusion
 
 The redesign is complete and suitable for owner review. It is not a production-deployment approval: form delivery, final high-resolution assets/project metadata, deployment configuration and tool-assisted/deployment-specific security review remain separate owner-authorised work.
+
+## G3 G4-convergence repair addendum
+
+Date: 21 August 2026
+Branch: luna/konceptwerk-homeowner-japandi-rebuild-g3
+Scope: bounded frontend convergence repair for PR #2, with localhost/browser QA and read-only live-reference comparison. No production, deployment, credential, private-data, or external-system mutation was performed.
+
+Admission:
+- Repository: Swooshz-com/konceptwerk.
+- PR #2 was OPEN and DRAFT.
+- Controller-authorized head at admission: 9e8951ff829a14fe17ceb54e8dbe009427e6734d.
+- Base: codex/full-site-redesign at c56ff65ff2b7751bf00fcac77c247c3c8bdb4923.
+- Dedicated worktree was clean at the authorized head.
+
+Repair evidence:
+- Scroll assist is mounted only on pathname /; route changes cancel timers, target, lock, intent and direction state.
+- Signed wheel intent requires 72px, reverses on meaningful opposite input, uses scrollend plus a 130ms quiet fallback and a 1000ms safety bound.
+- Homepage targets are hero, major business compositions, two Selected Work rows, Journal preview and CTA. Tall work rows remain natively scrollable and row targets are deduplicated by 80px.
+- Homepage order is Hero, About, Process, Why Koncept Werk, Services, Selected Work, Journal preview and CTA.
+- Studio, Services and Contact now use bounded image-led openings with existing verified imagery.
+- Display typography is moderated; the mobile menu logo is inverted on the dark menu; the hero header has a light contrast scrim; mobile navigation exposes aria-current=page.
+- Residential projects lead the homepage work order. The duplicate footer Home link is removed.
+
+Browser QA:
+- Candidate viewport captures: output/playwright/g3-repair/.
+- Live-reference captures: output/playwright/live/ with live-*-g3.png names.
+- Candidate visual matrix passed at 1280x720, 1366x768, 1440x900, 1920x1080, 390x844 and 430x932 for Home; 1366x768 and 1440x900 for Studio, Services and Contact.
+- Candidate checks found no horizontal overflow, one h1 per inspected route, no image-load failures after bounded full-page traversal, and no browser console errors or warnings.
+- Wheel evidence: 8px input remained native; an 80px or 2333px burst advanced only the first homepage target; repeated 8px input crossed the threshold once; an 80ms reversal left the opposite event unprevented and the scroll at an intermediate position; route transition to Services allowed immediate native wheel input.
+- Reduced-motion emulation kept scrolling native, left all reveal content visible and set html scroll behavior to auto.
+- Work filtering, mobile menu Escape/focus restoration, contact validation, Journal, Careers, legal pages and tablet/mobile overflow were spot-checked.
+
+Validation:
+- npm run typecheck: PASS.
+- npm run lint: PASS.
+- npm run build: PASS; all 20 routes generated.
+- git diff --check: PASS.
+- Secret-pattern scan: PASS; no high-confidence private-key/token patterns found in tracked source.
+- Codex Security: unavailable in the current environment; manual/static security coverage only.
+- Production readiness remains deferred for the same form backend, deployment and tool-assisted security reasons recorded above.
+
+This addendum records owner-review convergence evidence. It does not authorize or imply production deployment.
