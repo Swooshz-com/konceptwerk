@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -79,23 +80,34 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
     };
   }, [menuOpen]);
 
-  const transparent = overlay && !scrolled && !menuOpen;
+  const transparent = (overlay || pathname === "/") && !scrolled && !menuOpen;
+  const headerClassName = [
+    "site-header",
+    transparent ? "site-header--overlay" : "site-header--solid",
+    menuOpen ? "site-header--menu-open" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <>
-      <header
-        className={`site-header ${transparent ? "site-header--overlay" : "site-header--solid"}`}
-        style={menuOpen ? { background: "var(--ink)" } : undefined}
-      >
+      <header className={headerClassName}>
         <div className="site-header__inner">
           <Link
-            className="wordmark"
+            className="site-brand"
             href="/"
             aria-label="Koncept Werk home"
             aria-hidden={menuOpen || undefined}
             tabIndex={menuOpen ? -1 : undefined}
           >
-            KONCEPT WERK
+            <Image
+              className="site-brand__image"
+              src="/images/brand/koncept-werk.webp"
+              alt=""
+              width={500}
+              height={196}
+              sizes="(max-width: 900px) 136px, 184px"
+            />
           </Link>
           <nav className="desktop-nav" aria-label="Primary navigation" aria-hidden={menuOpen || undefined}>
             {navigation.map((item) => (

@@ -3,8 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ArrowIcon } from "@/components/ArrowIcon";
+import { HomeSectionScrollAssist } from "@/components/HomeSectionScrollAssist";
 import { InquiryCta } from "@/components/InquiryCta";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
+import { ScrollParallaxObserver } from "@/components/ScrollParallaxObserver";
 import { TextLink } from "@/components/TextLink";
 import { articles, projects, serviceGroups, site } from "@/lib/site-data";
 
@@ -63,7 +65,7 @@ export default function HomePage() {
   return (
     <main id="main-content" className="home-page page-main--flush">
       <section className="home-hero" aria-labelledby="home-title">
-        <div className="home-hero__media">
+        <div className="home-hero__media" data-parallax>
           <Image
             src="/images/projects/residential/residential-hero.webp"
             alt="Warm Koncept Werk open-plan residential interior with timber cabinetry"
@@ -202,6 +204,8 @@ export default function HomePage() {
       </section>
 
       <InquiryCta />
+      <HomeSectionScrollAssist />
+      <ScrollParallaxObserver />
     </main>
   );
 }

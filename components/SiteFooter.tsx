@@ -8,13 +8,15 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="site-footer__top page-shell">
         <div className="site-footer__brand">
-          <Image
-            src="/images/brand/koncept-werk.webp"
-            alt="Koncept Werk"
-            width={500}
-            height={196}
-            sizes="(max-width: 768px) 52vw, 240px"
-          />
+          <Link className="site-footer__brand-link" href="/" aria-label="Koncept Werk home">
+            <Image
+              src="/images/brand/koncept-werk.webp"
+              alt=""
+              width={500}
+              height={196}
+              sizes="(max-width: 768px) 52vw, 240px"
+            />
+          </Link>
           <p>Interior design, construction and project delivery, brought together.</p>
         </div>
         <div className="site-footer__column">
@@ -39,8 +41,14 @@ export function SiteFooter() {
           ))}
         </div>
       </div>
-      <div className="site-footer__wordmark" aria-hidden="true">
-        KONCEPT WERK
+      <div className="site-footer__signature" aria-hidden="true">
+        <Image
+          src="/images/brand/koncept-werk.webp"
+          alt=""
+          width={500}
+          height={196}
+          sizes="(max-width: 767px) 88vw, 62vw"
+        />
       </div>
       <div className="site-footer__base page-shell">
         <p>© {new Date().getFullYear()} {site.name}. {site.legalName}.</p>

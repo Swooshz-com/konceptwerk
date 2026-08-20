@@ -5,7 +5,7 @@ import { TextLink } from "@/components/TextLink";
 export function InquiryCta() {
   return (
     <section className="inquiry-cta">
-      <div className="inquiry-cta__image" data-reveal="image">
+      <div className="inquiry-cta__image" data-reveal="image" data-parallax>
         <Image
           src="/images/projects/hospitality/bar-warm.webp"
           alt="Warm commercial interior by Koncept Werk"
