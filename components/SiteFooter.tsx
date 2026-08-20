@@ -18,13 +18,14 @@ export function SiteFooter() {
           <p>Interior design, construction and project delivery, brought together.</p>
         </div>
         <div className="site-footer__column">
-          <p className="footer-label">Navigate</p>
+          <p className="footer-label">Quick links</p>
+          <Link href="/">Home</Link>
           {navigation.map((item) => (
             <Link key={item.href} href={item.href}>
               {item.label}
             </Link>
           ))}
-          <Link href="/careers">Careers</Link>
+          <Link href="/work">Portfolio</Link>
         </div>
         <div className="site-footer__column">
           <p className="footer-label">Talk to us</p>
@@ -33,14 +34,21 @@ export function SiteFooter() {
           <p>{site.address}</p>
         </div>
         <div className="site-footer__column">
-          <p className="footer-label">Studio hours</p>
+          <p className="footer-label">Working hours</p>
           {site.hours.map((line) => (
             <p key={line}>{line}</p>
           ))}
         </div>
       </div>
       <div className="site-footer__wordmark" aria-hidden="true">
-        KONCEPT WERK
+        <Image
+          className="site-footer__large-logo"
+          src="/images/brand/koncept-werk.webp"
+          alt=""
+          width={500}
+          height={196}
+          sizes="(max-width: 640px) 90vw, 520px"
+        />
       </div>
       <div className="site-footer__base page-shell">
         <p>© {new Date().getFullYear()} {site.name}. {site.legalName}.</p>

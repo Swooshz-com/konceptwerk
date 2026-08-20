@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: "Koncept Werk | Interior Design & Build",
     description:
-      "Smart design, seamless execution and tailored residential, commercial and exhibition interiors.",
+      "Smart design, seamless execution and interiors tailored for your space.",
     url: site.url,
     images: [
       {
@@ -42,20 +43,20 @@ export const metadata: Metadata = {
 
 const principles = [
   {
-    title: "End-to-end thinking",
-    description: "Design, construction and project management remain connected from the first plan through delivery.",
+    title: "Smart, space-saving design solutions",
+    description: "Planning starts with how a home needs to work, making room for comfort, storage and the routines of daily life.",
   },
   {
-    title: "Tailored creativity",
-    description: "Each project begins with the people, routines and purpose that the space needs to support.",
+    title: "Turnkey interior and contracting service",
+    description: "Interior design, construction and project management stay connected from the first plan through delivery.",
   },
   {
-    title: "Craftsmanship in the detail",
-    description: "Material, joinery and construction decisions are developed as part of the design, not after it.",
+    title: "Customized around your lifestyle",
+    description: "Each project is tailored to the people, preferences and practical needs that make a space feel like home.",
   },
   {
-    title: "Clear project coordination",
-    description: "A defined six-stage process keeps the brief, quotation, planning, scheduling and renovation legible.",
+    title: "Transparent processes and timely delivery",
+    description: "A clear six-stage journey keeps consultation, quotation, planning, scheduling and renovation easy to follow.",
   },
 ] as const;
 
@@ -73,10 +74,17 @@ export default function HomePage() {
           />
         </div>
         <div className="home-hero__content">
-          <h1 id="home-title">Smart design.<br />Seamless execution.</h1>
-          <p className="home-hero__sub">Tailored for your space.</p>
+          <h1 id="home-title">
+            Smart Design.{" "}<br />
+            Seamless Execution.{" "}
+            <span>Tailored for Your Space.</span>
+          </h1>
+          <p className="home-hero__sub">
+            At KonceptWerk.com, we specialize in intelligent interior design and quality contract work that transforms
+            your space into a harmonious blend of functionality and style.
+          </p>
           <div className="home-hero__actions">
-            <TextLink href="/work">View selected work</TextLink>
+            <TextLink href="/work">Discover our portfolio</TextLink>
             <TextLink href="/contact">Start a project</TextLink>
           </div>
         </div>
@@ -89,7 +97,7 @@ export default function HomePage() {
             Koncept Werk combines intelligent interior design with contracting precision to deliver residential,
             commercial and exhibition spaces from concept through execution.
           </p>
-          <TextLink href="/studio">Meet the studio</TextLink>
+          <TextLink href="/studio">About Koncept Werk</TextLink>
         </div>
       </section>
 
@@ -100,13 +108,18 @@ export default function HomePage() {
         </div>
         <div className="home-work-grid">
           {projects.slice(0, 4).map((project, index) => (
-            <article className="home-project" key={project.slug} data-reveal="image" style={{ "--delay": `${index * 60}ms` } as React.CSSProperties}>
+            <article
+              className="home-project"
+              key={project.slug}
+              data-reveal="image"
+              style={{ "--delay": `${index * 60}ms` } as CSSProperties}
+            >
               <Link className="home-project__image" href={`/work/${project.slug}`} aria-label={`View ${project.title}`}>
                 <Image
                   src={project.cover.src}
                   alt={project.cover.alt}
                   fill
-                  sizes="(max-width: 767px) 100vw, 56vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 42vw"
                 />
               </Link>
               <div className="home-project__meta">
@@ -155,7 +168,7 @@ export default function HomePage() {
 
       <section className="home-principles section-pad" aria-labelledby="why-title">
         <div className="home-principles__layout page-shell">
-          <h2 id="why-title" data-reveal>Why Koncept Werk</h2>
+          <h2 id="why-title" data-reveal>What sets us apart</h2>
           <div className="principles-list">
             {principles.map((principle) => (
               <article className="principle" key={principle.title} data-reveal>

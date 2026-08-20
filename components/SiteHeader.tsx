@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -79,36 +80,47 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
     };
   }, [menuOpen]);
 
-  const transparent = overlay && !scrolled && !menuOpen;
+  const transparent = (overlay || pathname === "/") && !scrolled && !menuOpen;
 
   return (
     <>
       <header
         className={`site-header ${transparent ? "site-header--overlay" : "site-header--solid"}`}
-        style={menuOpen ? { background: "var(--ink)" } : undefined}
+        style={menuOpen ? { background: "var(--brown-deep)", color: "var(--paper-light)" } : undefined}
       >
         <div className="site-header__inner">
           <Link
-            className="wordmark"
+            className="site-header__brand"
             href="/"
             aria-label="Koncept Werk home"
             aria-hidden={menuOpen || undefined}
             tabIndex={menuOpen ? -1 : undefined}
           >
-            KONCEPT WERK
+            <Image
+              className="site-header__logo"
+              src="/images/brand/koncept-werk.webp"
+              alt="Koncept Werk"
+              width={500}
+              height={196}
+              sizes="(max-width: 640px) 130px, 170px"
+            />
           </Link>
           <nav className="desktop-nav" aria-label="Primary navigation" aria-hidden={menuOpen || undefined}>
-            {navigation.map((item) => (
-              <Link
-                key={item.href}
-                className="desktop-nav__link"
-                href={item.href}
-                aria-current={pathname.startsWith(item.href) ? "page" : undefined}
-                tabIndex={menuOpen ? -1 : undefined}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navigation.map((item) => {
+              const itemPath = item.href.split("#")[0];
+              const isActive = pathname === itemPath || pathname.startsWith(`${itemPath}/`);
+              return (
+                <Link
+                  key={item.href}
+                  className="desktop-nav__link"
+                  href={item.href}
+                  aria-current={isActive ? "page" : undefined}
+                  tabIndex={menuOpen ? -1 : undefined}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
           <button
             ref={menuButtonRef}
@@ -137,6 +149,10 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
         aria-hidden={!menuOpen}
       >
         <nav className="mobile-menu__nav" aria-label="Mobile navigation">
+          <Link href="/" className="mobile-menu__link" tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>
+            <span>00</span>
+            Home
+          </Link>
           {navigation.map((item, index) => (
             <Link
               key={item.href}

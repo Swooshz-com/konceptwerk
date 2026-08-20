@@ -10,11 +10,11 @@ export const site = {
 } as const;
 
 export const navigation = [
-  { label: "Work", href: "/work" },
-  { label: "Studio", href: "/studio" },
-  { label: "Services", href: "/services" },
-  { label: "Journal", href: "/journal" },
-  { label: "Contact", href: "/contact" },
+  { label: "About us", href: "/studio" },
+  { label: "Our Services", href: "/services" },
+  { label: "Career", href: "/studio#career" },
+  { label: "Blog", href: "/journal" },
+  { label: "Contact Us", href: "/contact" },
 ] as const;
 
 export type ProjectCategory = "Residential" | "Commercial" | "Exhibition";

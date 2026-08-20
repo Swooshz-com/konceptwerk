@@ -1,6 +1,6 @@
-# Koncept Werk website redesign
+# Koncept Werk website
 
-Owner-review build of the Koncept Werk interior design and build website. The implementation is a statically generated Next.js site with an editorial, photography-led portfolio system and verified business content sourced from the existing Koncept Werk website.
+Owner-review build of the Koncept Werk interior design and build website. The implementation is a statically generated Next.js site with a warm, homeowner-oriented Japandi presentation, real Koncept Werk imagery and verified business content sourced from the existing website.
 
 ## Local development
 

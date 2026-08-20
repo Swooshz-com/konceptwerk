@@ -40,6 +40,6 @@ No verified public social-profile links were found, so none are displayed.
 ## Owner inputs that would improve the site
 
 - High-resolution originals and verified metadata for individual residential and commercial projects.
-- Current studio/team photography suitable for large-format editorial presentation.
+- Current studio/team photography suitable for warm, high-resolution residential presentation.
 - An authorised form-processing and spam-protection choice for production migration.
 - Verified social-profile URLs, if the studio wants them included.

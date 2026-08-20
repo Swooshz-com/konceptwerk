@@ -7,11 +7,18 @@ import { TextLink } from "@/components/TextLink";
 import { team } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Studio",
+  title: "About us",
   description:
     "Meet Koncept Werk, an interior design and build studio bringing intelligent planning, craftsmanship and project delivery together.",
   alternates: { canonical: "/studio" },
 };
+
+const strengths = [
+  "Smart, space-saving design solutions",
+  "Turnkey interior and contracting service",
+  "Customized approach tailored to your lifestyle and needs",
+  "Transparent processes and timely delivery",
+] as const;
 
 export default function StudioPage() {
   return (
@@ -67,6 +74,24 @@ export default function StudioPage() {
         </blockquote>
       </section>
 
+      <section className="studio-strengths section-pad" aria-labelledby="strengths-title">
+        <div className="page-shell">
+          <div className="studio-strengths__intro">
+            <h2 id="strengths-title" data-reveal>What sets us apart</h2>
+            <p data-reveal>
+              A practical, tailored approach keeps the space, the brief and the build aligned from beginning to end.
+            </p>
+          </div>
+          <div className="studio-strengths__list">
+            {strengths.map((strength) => (
+              <div className="studio-strengths__item" key={strength} data-reveal>
+                <strong>{strength}</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="studio-process page-shell section-pad" aria-labelledby="approach-title">
         <div className="home-process__heading">
           <h2 id="approach-title" data-reveal>Thoughtful planning. Clear execution.</h2>
@@ -78,8 +103,8 @@ export default function StudioPage() {
         <ProcessTimeline showDescriptions={false} />
       </section>
 
-      <section className="careers-prompt page-shell section-pad">
-        <h2 data-reveal>Interested in joining the studio?</h2>
+      <section className="careers-prompt page-shell section-pad" id="career" aria-labelledby="career-title">
+        <h2 id="career-title" data-reveal>Interested in joining the studio?</h2>
         <div className="careers-prompt__copy" data-reveal>
           <p>
             There are no published vacancies at present. Koncept Werk welcomes general expressions of interest for
