@@ -457,16 +457,6 @@ h2 {
   color: var(--paper-light);
 }
 
-.site-footer__wordmark {
-  padding: clamp(4rem, 9vw, 8rem) var(--page-gutter) 2rem;
-}
-
-.site-footer__large-logo {
-  width: min(32rem, 84vw);
-  height: auto;
-  filter: brightness(0) invert(1);
-}
-
 .site-footer__base {
   display: flex;
   align-items: center;

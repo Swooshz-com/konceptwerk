@@ -402,14 +402,6 @@
     grid-column: 1 / -1;
   }
 
-  .site-footer__wordmark {
-    padding-top: 4rem;
-  }
-
-  .site-footer__large-logo {
-    width: min(22rem, 90vw);
-  }
-
   .site-footer__base {
     align-items: flex-start;
     flex-direction: column;

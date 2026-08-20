@@ -40,16 +40,6 @@ export function SiteFooter() {
           ))}
         </div>
       </div>
-      <div className="site-footer__wordmark" aria-hidden="true">
-        <Image
-          className="site-footer__large-logo"
-          src="/images/brand/koncept-werk.webp"
-          alt=""
-          width={500}
-          height={196}
-          sizes="(max-width: 640px) 90vw, 520px"
-        />
-      </div>
       <div className="site-footer__base page-shell">
         <p>© {new Date().getFullYear()} {site.name}. {site.legalName}.</p>
         <div>
