@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -79,36 +80,52 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
     };
   }, [menuOpen]);
 
-  const transparent = overlay && !scrolled && !menuOpen;
+  const transparent = (overlay || pathname === "/") && !scrolled && !menuOpen;
+  const headerClassName = [
+    "site-header",
+    transparent ? "site-header--overlay" : "site-header--solid",
+    menuOpen ? "site-header--menu-open" : "",
+  ].filter(Boolean).join(" ");
 
   return (
     <>
       <header
-        className={`site-header ${transparent ? "site-header--overlay" : "site-header--solid"}`}
-        style={menuOpen ? { background: "var(--ink)" } : undefined}
+        className={headerClassName}
+        style={menuOpen ? { background: "var(--brown-deep)", color: "var(--paper-light)" } : undefined}
       >
         <div className="site-header__inner">
           <Link
-            className="wordmark"
+            className="site-header__brand"
             href="/"
             aria-label="Koncept Werk home"
             aria-hidden={menuOpen || undefined}
             tabIndex={menuOpen ? -1 : undefined}
           >
-            KONCEPT WERK
+            <Image
+              className="site-header__logo"
+              src="/images/brand/koncept-werk.webp"
+              alt="Koncept Werk"
+              width={500}
+              height={196}
+              sizes="(max-width: 640px) 130px, 170px"
+            />
           </Link>
           <nav className="desktop-nav" aria-label="Primary navigation" aria-hidden={menuOpen || undefined}>
-            {navigation.map((item) => (
-              <Link
-                key={item.href}
-                className="desktop-nav__link"
-                href={item.href}
-                aria-current={pathname.startsWith(item.href) ? "page" : undefined}
-                tabIndex={menuOpen ? -1 : undefined}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navigation.map((item) => {
+              const itemPath = item.href.split("#")[0];
+              const isActive = pathname === itemPath || pathname.startsWith(itemPath + "/");
+              return (
+                <Link
+                  key={item.href}
+                  className="desktop-nav__link"
+                  href={item.href}
+                  aria-current={isActive ? "page" : undefined}
+                  tabIndex={menuOpen ? -1 : undefined}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
           <button
             ref={menuButtonRef}
@@ -130,31 +147,37 @@ export function SiteHeader({ overlay = false }: SiteHeaderProps) {
       <div
         ref={menuPanelRef}
         id="mobile-menu"
-        className={`mobile-menu ${menuOpen ? "is-open" : ""}`}
+        className={"mobile-menu " + (menuOpen ? "is-open" : "")}
         role="dialog"
         aria-modal={menuOpen ? "true" : undefined}
         aria-label="Site navigation"
         aria-hidden={!menuOpen}
       >
         <nav className="mobile-menu__nav" aria-label="Mobile navigation">
-          {navigation.map((item, index) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="mobile-menu__link"
-              tabIndex={menuOpen ? 0 : -1}
-              onClick={() => setMenuOpen(false)}
-            >
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              {item.label}
-            </Link>
-          ))}
+          {navigation.map((item, index) => {
+            const itemPath = item.href.split("#")[0];
+            const isActive = pathname === itemPath || pathname.startsWith(itemPath + "/");
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={["mobile-menu__link", isActive ? "is-active" : ""].filter(Boolean).join(" ")}
+                aria-current={isActive ? "page" : undefined}
+                tabIndex={menuOpen ? 0 : -1}
+                onClick={() => setMenuOpen(false)}
+              >
+                <span>{String(index).padStart(2, "0")}</span>
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
         <div className="mobile-menu__contact">
-          <a href={`mailto:${site.email}`} tabIndex={menuOpen ? 0 : -1}>
+          <a href={"mailto:" + site.email} tabIndex={menuOpen ? 0 : -1}>
             {site.email}
           </a>
-          <a href={`tel:${site.phone}`} tabIndex={menuOpen ? 0 : -1}>
+          <a href={"tel:" + site.phone} tabIndex={menuOpen ? 0 : -1}>
             {site.phoneDisplay}
           </a>
           <p>{site.address}</p>

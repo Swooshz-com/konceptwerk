@@ -9,6 +9,7 @@ import "./globals.css";
 import { RevealObserver } from "@/components/RevealObserver";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SectionScrollAssist } from "@/components/SectionScrollAssist";
 import { site } from "@/lib/site-data";
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Koncept Werk",
   },
   description:
-    "Koncept Werk brings intelligent interior design, construction and project management together for residential, commercial and exhibition spaces.",
+    "Koncept Werk brings intelligent interior design, construction and project management together for residential and commercial spaces.",
   icons: {
     icon: "/images/brand/koncept-mark.webp",
     apple: "/images/brand/koncept-mark.webp",
@@ -50,13 +51,14 @@ const structuredData = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body>
         <a className="skip-link" href="#main-content">Skip to content</a>
         <SiteHeader />
         {children}
         <SiteFooter />
         <RevealObserver />
+        <SectionScrollAssist />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}

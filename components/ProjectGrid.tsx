@@ -9,7 +9,7 @@ import { projects, type ProjectCategory } from "@/lib/site-data";
 
 type Filter = "All" | ProjectCategory;
 
-const filters: Filter[] = ["All", "Residential", "Commercial", "Exhibition"];
+const filters: Filter[] = ["All", "Residential", "Commercial"];
 
 export function ProjectGrid() {
   const [filter, setFilter] = useState<Filter>("All");

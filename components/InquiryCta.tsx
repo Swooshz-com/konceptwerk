@@ -7,10 +7,10 @@ export function InquiryCta() {
     <section className="inquiry-cta">
       <div className="inquiry-cta__image" data-reveal="image">
         <Image
-          src="/images/projects/hospitality/bar-warm.webp"
-          alt="Warm commercial interior by Koncept Werk"
+          src="/images/projects/residential/open-kitchen.webp"
+          alt="Warm open kitchen and living interior by Koncept Werk"
           fill
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 768px) 100vw, 55vw"
         />
       </div>
       <div className="inquiry-cta__content" data-reveal>
